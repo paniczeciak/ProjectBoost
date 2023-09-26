@@ -1,2 +1,2 @@
 # ProjectBoost
- Complete C# Unity Game Developer 3D - Project Boost gamr tutorial
+ Complete C# Unity Game Developer 3D - Project Boost game tutorial
