@@ -516,10 +516,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 2187473538811632210, guid: 1fe9e99ce0237c14ebec72421485867b, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 4219468062317771396, guid: 1fe9e99ce0237c14ebec72421485867b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -530,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219468062317771396, guid: 1fe9e99ce0237c14ebec72421485867b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.506
+      value: 1.123
       objectReference: {fileID: 0}
     - target: {fileID: 4219468062317771396, guid: 1fe9e99ce0237c14ebec72421485867b, type: 3}
       propertyPath: m_LocalPosition.z
