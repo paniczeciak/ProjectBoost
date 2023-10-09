@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ public class CollisionHandler : MonoBehaviour
     AudioSource myAudioSource;
 
     bool isTransitioning = false;
+    bool collisionDisable = false;
 
     void Start()
     {
@@ -22,10 +24,26 @@ public class CollisionHandler : MonoBehaviour
 
     }
 
+   
+    void Update()
+    {
+        RespondToDebugKeys();
+    }
+
+    void RespondToDebugKeys() //debbugowanie
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        } else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisable = !collisionDisable; //toggle collision
+        }
+    }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (isTransitioning == true)
+        if (isTransitioning == true || collisionDisable == true)
         {
             return;
         }
@@ -46,7 +64,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
-        // to do particle effect upon crash
+        
         isTransitioning = true;
         myAudioSource.Stop();
         myAudioSource.PlayOneShot(crashSound);
